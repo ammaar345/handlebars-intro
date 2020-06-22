@@ -5,14 +5,14 @@
     <title>bread</title>
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/x-template" class="userTemplate">
-    { {#if billItemType === "call"} } {     
-   
-        }
-         else if (billItemType === "sms") {       
+    <script type="text/x-template" class="costTemplate">
+
     
-      }    
-      {{/if}}
+    {{callTotalAmount}}
+{{smsTotalAmount}}
+{{totalAmount}}
+
+
     </script>
   </head>
   <body>
@@ -43,24 +43,23 @@
           </div>
    <div class="container ">
         
-            <div class="one columns right">
-              <h5>Totals</h5>
-              <table>
-                <tr>
-                  <td>Call total</td>
-                  <td>R<span class="callTotalOne">0.00</span></td>
-                </tr>
-                <tr>
-                  <td>SMS total</td>
-                  <td>R<span class="smsTotalOne">0.00</span></td>
-                </tr>
-                <tr>
-                  <td>Total</td>
-                  <td class="red">R<span class="totalOne">0.00</span></td>
-                </tr>
-              </table>
-            
-            </div>
+    <div class="one columns right">
+      <h5>Totals</h5>
+      <table>
+      <tr>
+      <td>Call total</td>
+      <td>R<span class="callTotalOne">{{callTotal}}</span></td>
+      </tr>
+      <tr>
+      <td>SMS total</td>
+      <td>R<span class="smsTotalOne">{{smsTotal}}</span></td>
+      </tr>
+      <tr>
+      <td>Total</td>
+      <td class="red">R<span class="totalOne">{{total}}</span></td>
+      </tr>
+      </table>
+      </div>
           </div>
           </div>
         </div>
@@ -102,24 +101,36 @@
               <button class="button-primary radioBillAddBtn" type="button" name="button">Add</button>
             </div>
          
-                  <h5>Totals</h5>
-                  <table>
+                
+                  <div class="one columns right">
+                    <h5>Totals</h5>
+                    <table>
                     <tr>
-                      <td>Call total</td>
-                      <td>R<span class="callTotalTwo">0.00</span></td>
+                    <td>Call total</td>
+                    <td>R<span class="callTotalTwo">{{callTotalAmount}}</span></td>
                     </tr>
                     <tr>
-                      <td>SMS total</td>
-                      <td>R<span class="smsTotalTwo">0.00</span></td>
+                    <td>SMS total</td>
+                    <td>R<span class="smsTotalTwo">{{smsTotalAmount}}</span></td>
                     </tr>
-                    <tr >
-                      <td>Total</td>
-                      <td class="orange" >R<span class="totalTwo">0.00</span></td>
+                    <tr>
+                    <td>Total</td>
+                    <td class="red">R<span class="totalTwo">{{totalAmount}}</span></td>
                     </tr>
-                  </table>
-      
-          </div>
-        </div>
+                    </table>
+                    </div>
+                    <!-- <table>
+                      <tr>
+                        <th>Sms Cost </th>
+                        <th>Call Cost</th>
+                        <th>Total</th>
+                       
+                      </tr>
+                      <tbody class="totalCostAll">
+                        
+                      </tbody>
+                    </table>
+        </div> -->
        
       </div>
     </div>
