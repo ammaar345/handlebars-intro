@@ -5,8 +5,8 @@ const smsTotal2 = document.querySelector(".smsTotalTwo");
 const total2 = document.querySelector(".totalTwo");
 const colorChanger = document.querySelector(".red");
 //var totalCostAll= document.querySelector(".totalCosts");
-var templateSource = document.querySelector(".costTemplate").innerHTML
-
+var templateSource = document.querySelector(".costTemplate").innerHTML;
+var pricesAll = document.querySelector(".result2")
 // compile the template
 
 var userTemplate = Handlebars.compile(templateSource);
@@ -21,8 +21,8 @@ function calculateBtnClick() {
     //var priceStore=userTemplate(prices)
     // totalCostAll.innerHTML= priceStore;
 
-     templateSource={smsTotalAmount :radioBill.getSTotal(),callTotalAmount:radioBill.getCTotal(),totalAmount:radioBill.getTotal()}
-
+    var result = { smsTotalAmount: radioBill.getSTotal(), callTotalAmount: radioBill.getCTotal(), totalAmount: radioBill.getTotal() }
+    pricesAll.innerHTML = result
 
     // var userDataHTML = userTemplate(prices);
 
