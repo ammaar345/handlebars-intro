@@ -10,11 +10,11 @@ const total=document.querySelector(".totalOne");
 const color=document.querySelector(".red");
 
 
-var templateSource2 = document.querySelector(".costTemplate").innerHTML;
-var pricesAll2 = document.querySelector(".result1")
+// var templateSource2 = document.querySelector(".costTemplate").innerHTML;
 
-//compile template 
-var userTemplate2 = Handlebars.compile(templateSource2);
+
+// //compile template 
+// var userTemplate2 = Handlebars.compile(templateSource2);
 
 function calculateBtnClicked(){
   var billSt=enterTxt.value;

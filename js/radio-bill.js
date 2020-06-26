@@ -5,11 +5,7 @@ const smsTotal2 = document.querySelector(".smsTotalTwo");
 const total2 = document.querySelector(".totalTwo");
 const colorChanger = document.querySelector(".red");
 //var totalCostAll= document.querySelector(".totalCosts");
-var templateSource = document.querySelector(".costTemplate").innerHTML;
-var pricesAll = document.querySelector(".result2")
-// compile the template
 
-var userTemplate = Handlebars.compile(templateSource);
 
 function calculateBtnClick() {
     // get a reference to the sms or call radio buttons
