@@ -9,12 +9,21 @@ const smsTotalElement=document.querySelector(".smsTotalOne");
 const total=document.querySelector(".totalOne");
 const color=document.querySelector(".red");
 
+
+var templateSource2 = document.querySelector(".costTemplate").innerHTML;
+var pricesAll2 = document.querySelector(".result1")
+
+//compile template 
+var userTemplate2 = Handlebars.compile(templateSource2);
+
 function calculateBtnClicked(){
   var billSt=enterTxt.value;
   textBill.totPhoneBill(billSt)
-  callTotalElement.innerHTML=textBill.getTotalCallPrice();;
-   smsTotalElement.innerHTML=textBill.getTotalSmsPrice();
-   total.innerHTML = textBill.getTotalPrice();;
+  // callTotalElement.innerHTML=textBill.getTotalCallPrice();;
+  //  smsTotalElement.innerHTML=textBill.getTotalSmsPrice();
+  //  total.innerHTML = textBill.getTotalPrice();;
+  var result2 = { smsTotalAmount:textBill.getTotalSmsPrice(), callTotalAmount: textBill.getTotalCallPrice(), totalAmount: textBill.getTotalPrice() }
+    pricesAll2.innerHTML = userTemplate(result2)
    styledApplic()
 
 }
@@ -25,4 +34,4 @@ function styledApplic(){
 color.classList.add(textBill.styledTotal())
 }
 
-    // addBtn.addEventListener("click",calculateBtnClicked);
+       addBtn.addEventListener("click",calculateBtnClicked);

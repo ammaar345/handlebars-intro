@@ -21,8 +21,8 @@ function calculateBtnClick() {
     //var priceStore=userTemplate(prices)
     // totalCostAll.innerHTML= priceStore;
 
-    var result = { smsTotalAmount: radioBill.getSTotal(), callTotalAmount: radioBill.getCTotal(), totalAmount: radioBill.getTotal() }
-    pricesAll.innerHTML = result
+    var result = { smsTotalAmount:radioBill.getSTotal(), callTotalAmount: radioBill.getCTotal(), totalAmount: radioBill.getTotal() }
+    pricesAll.innerHTML = userTemplate(result)
 
     // var userDataHTML = userTemplate(prices);
 
@@ -30,15 +30,15 @@ function calculateBtnClick() {
     //     callTotal2.innerHTML=radioBill.getCTotal();
     // smsTotal2.innerHTML=radioBill.getSTotal();
     //     total2.innerHTML = radioBill.getTotal();
-    // stylingTotalApplication();
+     stylingTotalApplication();
 
 }
-// function stylingTotalApplication() {
+ function stylingTotalApplication() {
 
-//     colorChanger.classList.remove("danger");
-//     colorChanger.classList.remove("warning");
-//       colorChanger.classList.add(radioBill.stylingTotal());
-// }
+     colorChanger.classList.remove("danger");
+    colorChanger.classList.remove("warning");
+       colorChanger.classList.add(radioBill.stylingTotal());
+ }
 
 
 radAddBtn.addEventListener("click", calculateBtnClick);
