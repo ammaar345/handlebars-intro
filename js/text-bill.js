@@ -21,7 +21,7 @@ function calculateBtnClicked() {
   textBill.totPhoneBill(billSt)
   // callTotalElement.innerHTML=textBill.getTotalCallPrice();;
   //  smsTotalElement.innerHTML=textBill.getTotalSmsPrice();
-  //  total.innerHTML = textBill.getTotalPrice();;
+  //  total.innerHTML = textBill.getTotalPrice();
   var result2 = { smsTotalAmount: textBill.getTotalSmsPrice(), callTotalAmount: textBill.getTotalCallPrice(), totalAmount: textBill.getTotalPrice() }
   pricesAll2.innerHTML = userTemplate(result2)
   styledApplic()
