@@ -29,7 +29,6 @@ function calculateBtnClicked() {
   var result2 = { smsTotalAmount: textBill.getTotalSmsPrice(), callTotalAmount: textBill.getTotalCallPrice(), totalAmount: textBill.getTotalPrice() }
   pricesAll2.innerHTML = userTemplate(result2)
    styledApplic();
-color.classList.add(text.styledTotal())
 }
 function styledApplic() {
   color.classList.remove("danger");
