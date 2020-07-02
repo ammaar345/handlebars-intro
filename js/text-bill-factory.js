@@ -62,9 +62,8 @@ function lvlName(){
 }
 
 
-function styledTotal(){ 
-   
- if(textBill.getTotalPrice()>=30 && textBill.getTotalPrice()<50){
+function styledTotal(){   
+ if (textBill.getTotalPrice()>=30 && textBill.getTotalPrice()<50){
      //make orange
      return "warning"
  } 

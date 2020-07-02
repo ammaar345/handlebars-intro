@@ -1,3 +1,7 @@
+// const { text } = require("body-parser");
+
+// const { text } = require("body-parser");
+
 // get a reference to the textbox where the bill type is to be entered
 let textBill = TextBill();
 const enterTxt = document.querySelector(".billTypeText");
@@ -24,14 +28,15 @@ function calculateBtnClicked() {
   //  total.innerHTML = textBill.getTotalPrice();
   var result2 = { smsTotalAmount: textBill.getTotalSmsPrice(), callTotalAmount: textBill.getTotalCallPrice(), totalAmount: textBill.getTotalPrice() }
   pricesAll2.innerHTML = userTemplate(result2)
-  styledApplic()
-
+   styledApplic();
+color.classList.add(text.styledTotal())
 }
 function styledApplic() {
-
   color.classList.remove("danger");
   color.classList.remove("warning");
   color.classList.add(textBill.styledTotal())
+  
+ 
 }
 
 addBtn.addEventListener("click", calculateBtnClicked);
